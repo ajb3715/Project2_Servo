@@ -96,6 +96,8 @@ int main(void)
   MX_TIM2_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
 
   /* USER CODE END 2 */
 
@@ -104,6 +106,33 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+
+	  //Move motor through the positions
+
+	  //Pos 1
+	  TIM3->CCR1 = 24;
+	  TIM2->CCR3 = 24;
+	  HAL_Delay(1000);
+	  //Pos 2
+	  TIM3->CCR1 = 35;
+	  TIM2->CCR3 = 35;
+	  HAL_Delay(1000);
+	  //Pos 3
+	  TIM3->CCR1 = 50;
+	  TIM2->CCR3 = 50;
+	  HAL_Delay(1000);
+	  //Pos 4
+	  TIM3->CCR1 = 68;
+	  TIM2->CCR3 = 68;
+	  HAL_Delay(1000);
+	  //Pos 5
+	  TIM3->CCR1 = 85;
+	  TIM2->CCR3 = 85;
+	  HAL_Delay(1000);
+	  //Pos 6
+	  TIM3->CCR1 = 100;
+	  TIM2->CCR3 = 100;
+	  HAL_Delay(1000);
 
     /* USER CODE BEGIN 3 */
   }
