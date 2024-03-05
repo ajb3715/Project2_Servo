@@ -1,0 +1,9 @@
+../Core/Src/state_machine.c:65:13:process_event	29
+../Core/Src/state_machine.c:240:6:process_servo1	9
+../Core/Src/state_machine.c:283:6:process_servo2	9
+../Core/Src/state_machine.c:326:6:state_machine	4
+../Core/Src/state_machine.c:366:6:process_servo_command	18
+../Core/Src/state_machine.c:453:6:move_servo	12
+../Core/Src/state_machine.c:500:5:check_errors	7
+../Core/Src/state_machine.c:513:6:init_servo1	1
+../Core/Src/state_machine.c:523:6:init_servo2	1

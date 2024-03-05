@@ -55,6 +55,7 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
+void Move_Servo(int pos, int servo);
 
 /* USER CODE END EFP */
 
@@ -75,6 +76,29 @@ void Error_Handler(void);
 #define SWO_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
+#define MOVE_MOTOR1_POS1()	TIM3->CCR1 = 24;
+
+#define MOVE_MOTOR1_POS2()	TIM3->CCR1 = 35;
+
+#define MOVE_MOTOR1_POS3()	TIM3->CCR1 = 50;
+
+#define MOVE_MOTOR1_POS4()	TIM3->CCR1 = 68;
+
+#define MOVE_MOTOR1_POS5()	TIM3->CCR1 = 85;
+
+#define MOVE_MOTOR1_POS6()	TIM3->CCR1 = 100;
+
+#define MOVE_MOTOR2_POS1()	TIM2->CCR3 = 24;
+
+#define MOVE_MOTOR2_POS2()	TIM2->CCR3 = 35;
+
+#define MOVE_MOTOR2_POS3()	TIM2->CCR3 = 50;
+
+#define MOVE_MOTOR2_POS4()	TIM2->CCR3 = 68;
+
+#define MOVE_MOTOR2_POS5()	TIM2->CCR3 = 85;
+
+#define MOVE_MOTOR2_POS6()	TIM2->CCR3 = 100;
 
 /* USER CODE END Private defines */
 
